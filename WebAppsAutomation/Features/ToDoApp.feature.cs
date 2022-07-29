@@ -103,6 +103,9 @@ this.ScenarioInitialize(scenarioInfo);
 #line 4
  testRunner.Given("I have launched the ToDoApp", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
+#line 5
+ testRunner.Then("the date is set to \"today\'s date\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

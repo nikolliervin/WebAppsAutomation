@@ -13,5 +13,6 @@ namespace WebAppsAutomation.Pages
         {
             WebDriver = webDriver;
         }
+        
     }
 }

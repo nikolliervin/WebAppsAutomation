@@ -12,6 +12,8 @@ namespace WebAppsAutomation.Pages
         public void IHaveLaunchedTheApp()
         {
             webDriver.Navigate().GoToUrl("https://gorgeous-fudge-cc9998.netlify.app/");
+            
         }
+
     }
 }
