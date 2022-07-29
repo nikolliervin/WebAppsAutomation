@@ -1,3 +1,6 @@
+using SpecFlow;
+using TechTalk.SpecFlow;
+
 namespace WebAppsAutomation.StepDefinitions
 {
     [Binding]
