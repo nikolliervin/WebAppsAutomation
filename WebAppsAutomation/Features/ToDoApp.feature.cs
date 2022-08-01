@@ -141,7 +141,7 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have launched the ToDoApp", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 9
- testRunner.And("I add the task \'Task1\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I add the task \'Meeting at 10pm\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 10
  testRunner.And("I click the \'addBtn\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -184,7 +184,22 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.Given("I have launched the ToDoApp", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 15
+ testRunner.And("I add the task \'Automate WebApps\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 16
+ testRunner.And("I click the \'addBtn\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 17
+ testRunner.And("I add the task \'Order Food\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 18
+ testRunner.And("I click the \'addBtn\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 19
  testRunner.And("I click the \'clearBtn\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 20
+ testRunner.Then("all the tasks have been deleted", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

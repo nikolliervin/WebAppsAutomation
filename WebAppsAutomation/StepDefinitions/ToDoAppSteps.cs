@@ -44,6 +44,13 @@ namespace WebAppsAutomation.StepDefinitions
             _toDoApp.OneNewTaskIsAdded(taskNumber).Should().BeTrue();
         }
 
+        [Then(@"all the tasks have been deleted")]
+        public void ThenTheTasksFieldIsEmpty()
+        {
+            _toDoApp.ThenTheTasksFieldIsEmpty().Should().BeTrue();
+        }
+
+
 
 
 
