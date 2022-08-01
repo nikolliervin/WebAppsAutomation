@@ -26,6 +26,27 @@ namespace WebAppsAutomation.StepDefinitions
            
         }
 
+        [Given(@"I add the task '([^']*)'")]
+        public void GivenIAddTheTask(string taskName)
+        {
+            _toDoApp.AddTheTask(taskName);
+        }
+
+        [Given(@"I click the '([^']*)' button")]
+        public void GivenIClickInTheButton(string buttonName)
+        {
+            _toDoApp.ClickButton(buttonName);
+        }
+
+        [Then(@"'([^']*)' new task is added in the to do app")]
+        public void ThenNewTaskIsAddedInTheToDoApp(int taskNumber)
+        {
+            _toDoApp.OneNewTaskIsAdded(taskNumber).Should().BeTrue();
+        }
+
+
+
+
 
 
     }

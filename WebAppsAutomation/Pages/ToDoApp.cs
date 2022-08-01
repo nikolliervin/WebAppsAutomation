@@ -29,5 +29,19 @@ namespace WebAppsAutomation.Pages
             return today==webDriver.FindElement(_pagemap.dateField).Text;
         }
 
+        public void AddTheTask(string taskName)
+        {
+            webDriver.FindElement(_pagemap.taskInput).SendKeys(taskName);
+        }
+
+        public void ClickButton(string buttonId)
+        {
+            webDriver.FindElement(_pagemap.buttons(buttonId)).Click();
+        }
+
+        public bool OneNewTaskIsAdded(int taskNumber)
+        {
+            return webDriver.FindElements(_pagemap.taskfieldAdded).Count == taskNumber;
+        }
     }
 }
