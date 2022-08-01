@@ -14,7 +14,7 @@ namespace WebAppsAutomation.Pages
             WebDriver = webDriver;
         }
         
-        public static By dateField => By.XPath("//*[@id='date']");
+        public By dateField => By.XPath("//*[@id='date']");
 
     }
 }

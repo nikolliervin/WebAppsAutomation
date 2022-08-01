@@ -1,6 +1,7 @@
 using SpecFlow;
 using TechTalk.SpecFlow;
 using WebAppsAutomation.Pages;
+using FluentAssertions;
 
 namespace WebAppsAutomation.StepDefinitions
 {
@@ -17,7 +18,8 @@ namespace WebAppsAutomation.StepDefinitions
         [Then(@"the date is set to today")]
         public void ThenTheDateIsSetToToday()
         {
-            throw new PendingStepException();
+            _toDoApp.DateIsSetToToday().Should().BeTrue();
+           
         }
 
 

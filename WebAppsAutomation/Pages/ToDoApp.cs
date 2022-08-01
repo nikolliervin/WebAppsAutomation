@@ -15,5 +15,10 @@ namespace WebAppsAutomation.Pages
             
         }
 
+        public bool DateIsSetToToday()
+        {   
+            return true;
+        }
+
     }
 }
