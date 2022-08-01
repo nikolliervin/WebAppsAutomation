@@ -50,10 +50,10 @@ namespace WebAppsAutomation.StepDefinitions
             _toDoApp.ThenTheTasksFieldIsEmpty().Should().BeTrue();
         }
 
-        [Then(@"one task only is deleted")]
-        public void ThenTheTaskIsDeleted()
+        [Then(@"'([^']*)' task is deleted")]
+        public void ThenTheTaskIsDeleted(string theTaskName)
         {
-            throw new PendingStepException();
+            _toDoApp.ThenOneTaskIsDeleted(theTaskName).Should().BeFalse();  
         }
 
 

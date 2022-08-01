@@ -48,11 +48,10 @@ namespace WebAppsAutomation.Pages
         {
             return webDriver.FindElements(_pagemap.taskfieldAdded).Count == 0;
         }
-
-        public bool TheTheTaskIsDeleted(string taskName)
-        {
-            return webDriver.FindElements(_pagemap.taskfieldAdded).Count ==
-                   webDriver.FindElements(_pagemap.taskfieldAdded).Count - 1;
+        
+        public bool ThenOneTaskIsDeleted(string theTaskName)
+        {                     
+            return webDriver.FindElement(_pagemap.taskContent).Text==theTaskName;
         }
     }
 }

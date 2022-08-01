@@ -22,5 +22,8 @@ Scenario: Delete All tasks
 Scenario: Delete a certain task
 	Given I have launched the ToDoApp
 	And I add the task 'Delete a Certain Task'
+	And I click the 'addBtn' button
+	And I add the task 'Start Coding'
+	And I click the 'addBtn' button
 	And I click the 'deleteTaskBtn' button
-	Then one task only is deleted
+	Then 'Delete a Certain Task' task is deleted
