@@ -53,5 +53,10 @@ namespace WebAppsAutomation.Pages
         {                     
             return webDriver.FindElement(_pagemap.taskContent).Text==theTaskName;
         }
+
+        public bool InputFieldIsEmpty()
+        {
+            return webDriver.FindElement(_pagemap.taskInput).GetAttribute("value")=="";
+        }
     }
 }

@@ -56,6 +56,13 @@ namespace WebAppsAutomation.StepDefinitions
             _toDoApp.ThenOneTaskIsDeleted(theTaskName).Should().BeFalse();  
         }
 
+        [Given(@"the task input field is empty")]
+        public void GivenTheTaskInputFieldIsEmpty()
+        {
+            _toDoApp.ThenTheTasksFieldIsEmpty();
+        }
+
+
 
 
 
