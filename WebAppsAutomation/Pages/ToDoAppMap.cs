@@ -16,5 +16,7 @@ namespace WebAppsAutomation.Pages
     
         public By buttons(string buttonId) => By.XPath($"//*[@id='{buttonId}']");
 
+        public By taskContent => By.XPath("//*[@id='particles-js']/div/div/div[2]/div/p");
+
     }
 }

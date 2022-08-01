@@ -48,5 +48,10 @@ namespace WebAppsAutomation.Pages
         {
             return webDriver.FindElements(_pagemap.taskfieldAdded).Count == 0;
         }
+
+        public bool TheTheTaskIsDeleted(string taskName)
+        {
+            return webDriver.FindElement
+        }
     }
 }
