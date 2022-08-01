@@ -16,7 +16,8 @@ namespace WebAppsAutomation.Pages
         }
 
         public bool DateIsSetToToday()
-        {   
+        {
+            var today = DateTime.Now.Year + "-" + DateTime.Now.Month + "-" + DateTime.Now.Day;
             return true;
         }
 
