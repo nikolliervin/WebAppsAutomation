@@ -8,7 +8,11 @@ namespace WebAppsAutomation.StepDefinitions
     [Binding]
     public class ToDoAppSteps
     {
-        ToDoApp _toDoApp = new ToDoApp();
+        private ToDoApp _toDoApp;
+        public ToDoAppSteps(ToDoApp toDoApp)
+        {
+            _toDoApp = toDoApp;
+        }
         [Given(@"I have launched the ToDoApp")]
         public void GivenIHaveLaunchedTheToDoApp()
         {

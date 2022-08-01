@@ -7,14 +7,9 @@ namespace WebAppsAutomation.Pages
 {
     public partial class ToDoAppMap
     {   
-        public IWebDriver WebDriver { get; set; }
-
-        public ToDoAppMap(IWebDriver webDriver)
-        {
-            WebDriver = webDriver;
-        }
+       
         
-        public By dateField => By.XPath("//*[@id='date']");
+        public  By dateField => By.XPath("//*[@id='date']");
 
     }
 }
