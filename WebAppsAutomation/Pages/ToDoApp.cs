@@ -58,5 +58,18 @@ namespace WebAppsAutomation.Pages
         {
             return webDriver.FindElement(_pagemap.taskInput).GetAttribute("value")=="";
         }
+
+        public bool ThenNoTaskIsAdded()
+        {
+            try
+            {
+                webDriver.FindElement(_pagemap.taskfieldAdded);
+                return false;
+            }
+            catch (NoSuchElementException)
+            {
+                return true;
+            }
+        }
     }
 }

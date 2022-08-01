@@ -59,8 +59,15 @@ namespace WebAppsAutomation.StepDefinitions
         [Given(@"the task input field is empty")]
         public void GivenTheTaskInputFieldIsEmpty()
         {
-            _toDoApp.ThenTheTasksFieldIsEmpty();
+            _toDoApp.InputFieldIsEmpty().Should().BeTrue();
         }
+
+        [Then(@"No task is added")]
+        public void ThenNoTaskIsAdded()
+        {
+            _toDoApp.ThenNoTaskIsAdded().Should().BeTrue();
+        }
+
 
 
 
