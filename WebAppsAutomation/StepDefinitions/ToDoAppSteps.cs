@@ -14,5 +14,13 @@ namespace WebAppsAutomation.StepDefinitions
             _toDoApp.IHaveLaunchedTheApp();
         }
 
+        [Then(@"the date is set to today")]
+        public void ThenTheDateIsSetToToday()
+        {
+            throw new PendingStepException();
+        }
+
+
+
     }
 }

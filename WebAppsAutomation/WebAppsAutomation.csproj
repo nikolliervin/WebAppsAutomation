@@ -27,6 +27,7 @@
   <ItemGroup>
     <Folder Include="Drivers\" />
     <Folder Include="Support\" />
+    <Folder Include="WebElements\" />
   </ItemGroup>
 
 </Project>

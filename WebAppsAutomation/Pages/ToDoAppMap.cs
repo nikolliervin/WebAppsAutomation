@@ -5,14 +5,16 @@ using System.Text;
 
 namespace WebAppsAutomation.Pages
 {
-    public class LandingPage
+    public partial class ToDoAppMap
     {   
         public IWebDriver WebDriver { get; set; }
 
-        public LandingPage(IWebDriver webDriver)
+        public ToDoAppMap(IWebDriver webDriver)
         {
             WebDriver = webDriver;
         }
         
+        public static By dateField => By.XPath("//*[@id='date']");
+
     }
 }
