@@ -27,3 +27,9 @@ Scenario: Delete a certain task
 	And I click the 'addBtn' button
 	And I click the 'deleteTaskBtn' button
 	Then 'Delete a Certain Task' task is deleted
+
+Scenario: Adding a task when the field is empty
+	Given I have launched the ToDoApp
+	And the task input field is empty
+	And I click the 'addBtn' button
+	Then No task is added
