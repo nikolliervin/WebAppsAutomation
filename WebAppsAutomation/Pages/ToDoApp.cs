@@ -51,7 +51,8 @@ namespace WebAppsAutomation.Pages
 
         public bool TheTheTaskIsDeleted(string taskName)
         {
-            return webDriver.FindElement
+            return webDriver.FindElements(_pagemap.taskfieldAdded).Count ==
+                   webDriver.FindElements(_pagemap.taskfieldAdded).Count - 1;
         }
     }
 }
