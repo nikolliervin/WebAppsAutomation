@@ -19,3 +19,8 @@ Scenario: Delete All tasks
 	And I click the 'clearBtn' button
 	Then all the tasks have been deleted
 
+Scenario: Delete a certain task
+	Given I have launched the ToDoApp
+	And I add the task 'Delete a Certain Task'
+	And I click the 'deleteTaskBtn' button
+	Then The task 'Delete a Certain Task' is deleted
