@@ -17,5 +17,15 @@ namespace WebAppsAutomation.StepDefinitions
             weatherAppMap = weatherAppElements;
         }
 
+        public void IHaveLaunchedTheApp()
+        {
+            webDriver.Navigate().GoToUrl("https://marvelous-nougat-1199fd.netlify.app/");
+        }
+
+        public bool IsCitySetTo(string cityName)
+        {
+            return cityName == webDriver.FindElement(weatherAppMap.CityValue).Text;
+        }
+
     }
 }

@@ -14,5 +14,19 @@ namespace WebAppsAutomation.StepDefinitions
         {
             _weatherApp = weatherApp;   
         }
+
+        [Given(@"I have lauched the WeatherApp")]
+        public void GivenIHaveLauchedTheWeatherApp()
+        {
+            _weatherApp.IHaveLaunchedTheApp();
+        }
+
+        [Then(@"The default city is '([^']*)'")]
+        public void ThenTheDefaultCityIs(string city)
+        {
+            _weatherApp.IsCitySetTo(city);
+        }
+
+
     }
 }
