@@ -1,6 +1,5 @@
 using SpecFlow;
 using TechTalk.SpecFlow;
-using WebAppsAutomation.Pages;
 using FluentAssertions;
 
 namespace WebAppsAutomation.StepDefinitions

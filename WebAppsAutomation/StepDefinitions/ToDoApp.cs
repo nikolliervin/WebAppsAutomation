@@ -4,8 +4,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using FluentAssertions;
+using WebAppsAutomation.Pages;
 
-namespace WebAppsAutomation.Pages
+namespace WebAppsAutomation.StepDefinitions
 {
     public class ToDoApp
     {
@@ -20,13 +21,13 @@ namespace WebAppsAutomation.Pages
         public void IHaveLaunchedTheApp()
         {
             webDriver.Navigate().GoToUrl("https://gorgeous-fudge-cc9998.netlify.app/");
-            
+
         }
 
         public bool DateIsSetToToday()
         {
             var today = DateTime.Now.Year.ToString("d2") + "-" + DateTime.Now.Month.ToString("d2") + "-" + DateTime.Now.Day.ToString("d2");
-            return today==webDriver.FindElement(_pagemap.dateField).Text;
+            return today == webDriver.FindElement(_pagemap.dateField).Text;
         }
 
         public void AddTheTask(string taskName)
@@ -48,15 +49,15 @@ namespace WebAppsAutomation.Pages
         {
             return webDriver.FindElements(_pagemap.taskfieldAdded).Count == 0;
         }
-        
+
         public bool ThenOneTaskIsDeleted(string theTaskName)
-        {                     
-            return webDriver.FindElement(_pagemap.taskContent).Text==theTaskName;
+        {
+            return webDriver.FindElement(_pagemap.taskContent).Text == theTaskName;
         }
 
         public bool InputFieldIsEmpty()
         {
-            return webDriver.FindElement(_pagemap.taskInput).GetAttribute("value")=="";
+            return webDriver.FindElement(_pagemap.taskInput).GetAttribute("value") == "";
         }
 
         public bool ThenNoTaskIsAdded()

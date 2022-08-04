@@ -1,9 +1,5 @@
 ﻿Feature: WeatherApp
 
-
-
-@tag1
-Scenario: [scenario name]
-	Given [context]
-	When [action]
-	Then [outcome]
+Scenario: Checking if default city is 'London'
+	Given I have lauched the WeatherApp
+	Then The default city is 'London, GB'
