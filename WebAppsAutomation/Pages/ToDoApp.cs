@@ -10,8 +10,8 @@ namespace WebAppsAutomation.Pages
     public class ToDoApp
     {
         IWebDriver webDriver = new ChromeDriver();
-        private readonly ToDoAppMap _pagemap;
-        public ToDoApp(ToDoAppMap pagemap)
+        private readonly ToDoAppElements _pagemap;
+        public ToDoApp(ToDoAppElements pagemap)
         {
             _pagemap = pagemap;
         }

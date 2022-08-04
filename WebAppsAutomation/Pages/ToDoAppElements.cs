@@ -6,7 +6,7 @@ using System.Text;
 
 namespace WebAppsAutomation.Pages
 {
-    public partial class ToDoAppMap
+    public partial class ToDoAppElements
     {
         public By dateField => By.XPath("//*[@id='date']");
 
