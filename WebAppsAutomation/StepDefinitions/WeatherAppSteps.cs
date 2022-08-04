@@ -15,7 +15,7 @@ namespace WebAppsAutomation.StepDefinitions
             _weatherApp = weatherApp;   
         }
 
-        [Given(@"I have lauched the WeatherApp")]
+        [Given(@"I have launched the WeatherApp")]
         public void GivenIHaveLauchedTheWeatherApp()
         {
             _weatherApp.IHaveLaunchedTheApp();
@@ -26,6 +26,20 @@ namespace WebAppsAutomation.StepDefinitions
         {
             _weatherApp.IsCitySetTo(city);
         }
+
+        [When(@"I search for '([^']*)'")]
+        public void WhenISearchFor(string city)
+        {
+           _weatherApp.ISearchFor(city);
+        }
+
+        [Then(@"The city name is set to '([^']*)'")]
+        public void ThenTheCityNameIsSetTo(string cityName)
+        {
+            _weatherApp.IsCitySetTo(cityName);
+        }
+
+
 
 
     }

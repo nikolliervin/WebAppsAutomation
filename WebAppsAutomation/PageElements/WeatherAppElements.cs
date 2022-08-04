@@ -8,5 +8,9 @@ namespace WebAppsAutomation.Page_Elements
     public partial class WeatherAppElements
     {
         public By CityValue => By.XPath("//*[@id='cityName']");
+
+        public By CityInput => By.XPath("//*[@id='searchTextBox']");
+
+        public By SearchBtn => By.XPath("//*[@id='searchBtn']");
     }
 }

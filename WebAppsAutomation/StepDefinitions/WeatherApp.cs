@@ -11,6 +11,8 @@ namespace WebAppsAutomation.StepDefinitions
     public class WeatherApp
     {
         IWebDriver webDriver = new ChromeDriver();
+        
+        
         private readonly WeatherAppElements weatherAppMap;
         public WeatherApp(WeatherAppElements weatherAppElements)
         {
@@ -27,5 +29,13 @@ namespace WebAppsAutomation.StepDefinitions
             return cityName == webDriver.FindElement(weatherAppMap.CityValue).Text;
         }
 
+        public void ISearchFor(string cityName)
+        {
+            webDriver.FindElement(weatherAppMap.CityInput).SendKeys(cityName);
+            webDriver.FindElement(weatherAppMap.SearchBtn).Click();
+        }
+
+
+      
     }
 }
