@@ -34,7 +34,17 @@ namespace WebAppsAutomation.StepDefinitions
             webDriver.FindElement(weatherAppMap.CityInput).SendKeys(cityName);
             webDriver.FindElement(weatherAppMap.SearchBtn).Click();
         }
-
+        
+        public bool TheDetailsAreEqual(List<string> details)
+        {
+            return
+                webDriver.FindElement(weatherAppMap.DetailLabel("humidity")).Text.Contains(details[0]) &&
+                webDriver.FindElement(weatherAppMap.DetailLabel("windSpeed")).Text.Contains(details[1]) &&
+                webDriver.FindElement(weatherAppMap.DetailLabel("windDeg")).Text.Contains(details[2]) &&
+                webDriver.FindElement(weatherAppMap.DetailLabel("minTemp")).Text.Contains(details[3]) &&
+                webDriver.FindElement(weatherAppMap.DetailLabel("pressure")).Text.Contains(details[4]) &&
+                webDriver.FindElement(weatherAppMap.DetailLabel("maxTemp")).Text.Contains(details[5]);
+        }
 
       
     }

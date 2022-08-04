@@ -4,6 +4,8 @@ using System.Text;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
+using SpecFlow.Assist.Dynamic;
+using FluentAssertions;
 
 
 
@@ -45,12 +47,13 @@ namespace WebAppsAutomation.StepDefinitions
         [Then(@"the datails container has details for these")]
         public void ThenTheDatailsContainerHasDetailsForThese(Table detailsTable)
         {
-            var tableInstance=detailsTable.CreateSet<string>();
-            List<string> tableValues = new List<string>();   
-            foreach (var item in tableInstance)
+            var table=detailsTable.CreateDynamicSet();
+            List<string> tableValues=new List<string>();
+            foreach (var item in table)
             {
-                
+                tableValues.Add((string)item.Value);
             }
+            _weatherApp.TheDetailsAreEqual(tableValues).Should().BeTrue();
         }
 
 

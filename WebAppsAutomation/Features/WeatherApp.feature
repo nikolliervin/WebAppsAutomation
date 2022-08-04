@@ -17,9 +17,9 @@ Scenario: Check if details apper as in the table
 	| Humidity   |
 	| Wind Speed |
 	| Wind Deg   |
-	| Min Temp   |
+	| Min temp   |
 	| Pressure   |
-	| Max Temp   |
+	| Max temp   |
 		
 
 

@@ -12,5 +12,7 @@ namespace WebAppsAutomation.Page_Elements
         public By CityInput => By.XPath("//*[@id='searchTextBox']");
 
         public By SearchBtn => By.XPath("//*[@id='searchBtn']");
+
+        public By DetailLabel(string detailLabel) => By.XPath($"//*[@id='{detailLabel}Details']"); 
     }
 }
