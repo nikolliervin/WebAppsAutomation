@@ -9,5 +9,17 @@ Scenario: Checking the weather for a city
 	When I search for 'Tirana'
 	Then The city name is set to 'Tirana, AL'
 
+Scenario: Check if details apper as in the table
+	Given I have launched the WeatherApp
+	When I search for 'Tirana'
+	Then the datails container has details for these
+	| Value      |
+	| Humidity   |
+	| Wind Speed |
+	| Wind Deg   |
+	| Min Temp   |
+	| Pressure   |
+	| Max Temp   |
+		
 
 
