@@ -9,5 +9,10 @@ namespace WebAppsAutomation.StepDefinitions
     [Binding]
     public class WeatherAppSteps
     {
+        private WeatherApp _weatherApp;
+        public WeatherAppSteps(WeatherApp weatherApp)
+        {
+            _weatherApp = weatherApp;   
+        }
     }
 }

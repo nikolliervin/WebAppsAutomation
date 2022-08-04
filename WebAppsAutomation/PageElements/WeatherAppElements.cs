@@ -7,5 +7,6 @@ namespace WebAppsAutomation.Page_Elements
 {
     public partial class WeatherAppElements
     {
+        public By CityValue => By.XPath("//*[@id='cityName']");
     }
 }
