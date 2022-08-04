@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using OpenQA.Selenium;
 using TechTalk.SpecFlow;
+using TechTalk.SpecFlow.Assist;
+
+
 
 namespace WebAppsAutomation.StepDefinitions
 {
@@ -38,6 +41,18 @@ namespace WebAppsAutomation.StepDefinitions
         {
             _weatherApp.IsCitySetTo(cityName);
         }
+
+        [Then(@"the datails container has details for these")]
+        public void ThenTheDatailsContainerHasDetailsForThese(Table detailsTable)
+        {
+            var tableInstance=detailsTable.CreateSet<string>();
+            List<string> tableValues = new List<string>();   
+            foreach (var item in tableInstance)
+            {
+                
+            }
+        }
+
 
 
 
