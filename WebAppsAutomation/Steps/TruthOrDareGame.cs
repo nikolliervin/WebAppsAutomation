@@ -29,5 +29,13 @@ namespace WebAppsAutomation.Steps
                    datas[1] == webDriver.FindElement(truthOrDareMap.SmallTitle).Text &&
                    datas[2] == webDriver.FindElement(truthOrDareMap.PlayersContainer).Text;
         }
+
+        public void IEnterTheFollowingNames(List<string> namesList)
+        {
+            foreach (var item in namesList)
+            {
+                webDriver.FindElement(truthOrDareMap.PlayerNameInput).SendKeys(item);
+            }
+        }
     }
 }

@@ -34,8 +34,25 @@ namespace WebAppsAutomation.StepDefinitions
                 tableValues.Add((string)item.Value);
             }
 
-            truthOrDare.TheAppDisplaysTheFollowingData(tableValues).Should().BeTrue();
+            truthOrDare.TheAppDisplaysTheFollowingData(ConvertTableToList(contentTable)).Should().BeTrue();
             
+        }
+
+        [Given(@"I enter the following names")]
+        public void GivenIEnterTheFollowingNames(Table table)
+        {
+            truthOrDare.IEnterTheFollowingNames(ConvertTableToList(table));
+        }
+
+        public List<string> ConvertTableToList(Table Table)
+        {
+            var table = Table.CreateDynamicSet();
+            List<string> tableValues = new List<string>();
+            foreach (var item in table)
+            {
+                tableValues.Add((string)item.Value);
+            }
+            return tableValues;
         }
 
 

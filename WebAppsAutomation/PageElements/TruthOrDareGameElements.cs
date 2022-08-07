@@ -13,5 +13,8 @@ namespace WebAppsAutomation.PageElements
 
         public By PlayersContainer => By.XPath("//*[@id='startContainer']/header/p");
 
+        public By PlayerNameInput => By.XPath("//*[@id='inputPlayer']");
+
+        public By AddPlayerButton => By.XPath("//*[@id='addPlayer']");
     }
 }
