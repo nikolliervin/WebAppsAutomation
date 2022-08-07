@@ -6,7 +6,7 @@ using System.Text;
 using FluentAssertions;
 using WebAppsAutomation.Pages;
 
-namespace WebAppsAutomation.StepDefinitions
+namespace WebAppsAutomation.Steps
 {
     public class ToDoApp
     {

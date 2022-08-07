@@ -6,13 +6,13 @@ using System.Text;
 using FluentAssertions;
 using WebAppsAutomation.Page_Elements;
 
-namespace WebAppsAutomation.StepDefinitions
+namespace WebAppsAutomation.Steps
 {
     public class WeatherApp
     {
         IWebDriver webDriver = new ChromeDriver();
-        
-        
+
+
         private readonly WeatherAppElements weatherAppMap;
         public WeatherApp(WeatherAppElements weatherAppElements)
         {
@@ -34,7 +34,7 @@ namespace WebAppsAutomation.StepDefinitions
             webDriver.FindElement(weatherAppMap.CityInput).SendKeys(cityName);
             webDriver.FindElement(weatherAppMap.SearchBtn).Click();
         }
-        
+
         public bool TheDetailsAreEqual(List<string> details)
         {
             return
@@ -48,9 +48,9 @@ namespace WebAppsAutomation.StepDefinitions
 
         public bool CopyrightsShowOnFooter(string copyrights)
         {
-           return webDriver.FindElement(weatherAppMap.FooterCopyrights).Text == copyrights;
+            return webDriver.FindElement(weatherAppMap.FooterCopyrights).Text == copyrights;
         }
 
-      
+
     }
 }
