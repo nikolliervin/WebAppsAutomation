@@ -1,9 +1,10 @@
 ﻿Feature: TruthOrDareGame
 
-A short summary of the feature
 
-@tag1
-Scenario: [scenario name]
-	Given [context]
-	When [action]
-	Then [outcome]
+Scenario: I have launched the TruthOrDare game
+	Given I have launched the TruthOrDare game
+	Then the app displays the following data
+			| field            | value             |
+			| Title            | Truth or Dare!    |
+			| SmallTitle       | Enter your Names: |
+			| PlayersContainer | Players:          |
