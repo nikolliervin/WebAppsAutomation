@@ -16,5 +16,7 @@ namespace WebAppsAutomation.PageElements
         public By PlayerNameInput => By.XPath("//*[@id='inputPlayer']");
 
         public By AddPlayerButton => By.XPath("//*[@id='addPlayer']");
+
+        public By NamesAdded(int index) => By.XPath($"//*[@id='playersContainer']/p[{index}]");
     }
 }

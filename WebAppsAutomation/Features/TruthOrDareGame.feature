@@ -16,4 +16,8 @@ Scenario: Adding player names to the app
 			| John  |
 			| Mark  |
 			| Jim   |
-	Then the players container has the names
+	Then the following names are added
+			| Value |
+			| John  |
+			| Mark  |
+			| Jim   |

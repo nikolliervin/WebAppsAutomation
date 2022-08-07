@@ -163,8 +163,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 14
  testRunner.And("I enter the following names", ((string)(null)), table2, "And ");
 #line hidden
+                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Value"});
+                table3.AddRow(new string[] {
+                            "John"});
+                table3.AddRow(new string[] {
+                            "Mark"});
+                table3.AddRow(new string[] {
+                            "Jim"});
 #line 19
- testRunner.Then("the players container has the names", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("the following names are added", ((string)(null)), table3, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

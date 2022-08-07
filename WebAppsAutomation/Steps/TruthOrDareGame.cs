@@ -38,5 +38,13 @@ namespace WebAppsAutomation.Steps
                 webDriver.FindElement(truthOrDareMap.AddPlayerButton).Click();
             }
         }
+
+        public bool ThenTheNamesAreAdded(List<string> namesAdded)
+        {
+            return namesAdded[0]==webDriver.FindElement(truthOrDareMap.NamesAdded(1)).Text &&
+                   namesAdded[1]==webDriver.FindElement(truthOrDareMap.NamesAdded(2)).Text &&
+                   namesAdded[2]==webDriver.FindElement(truthOrDareMap.NamesAdded(3)).Text;
+                   ;
+        }
     }
 }

@@ -183,22 +183,22 @@ this.ScenarioInitialize(scenarioInfo);
 #line 14
  testRunner.When("I search for \'Tirana\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
                             "Value"});
-                table3.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Humidity"});
-                table3.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Wind Speed"});
-                table3.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Wind Deg"});
-                table3.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Min temp"});
-                table3.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Pressure"});
-                table3.AddRow(new string[] {
+                table4.AddRow(new string[] {
                             "Max temp"});
 #line 15
- testRunner.Then("the datails container has details for these", ((string)(null)), table3, "Then ");
+ testRunner.Then("the datails container has details for these", ((string)(null)), table4, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

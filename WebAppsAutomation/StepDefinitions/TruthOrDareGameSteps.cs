@@ -44,6 +44,14 @@ namespace WebAppsAutomation.StepDefinitions
             truthOrDare.IEnterTheFollowingNames(ConvertTableToList(table));
         }
 
+        [Then(@"the following names are added")]
+        public void ThenTheFollowingNamesAreAdded(Table table)
+        {
+            truthOrDare.ThenTheNamesAreAdded(ConvertTableToList(table)).Should().BeTrue();
+        }
+
+
+
         public List<string> ConvertTableToList(Table Table)
         {
             var table = Table.CreateDynamicSet();
