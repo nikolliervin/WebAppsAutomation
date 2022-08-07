@@ -59,7 +59,7 @@ namespace WebAppsAutomation.StepDefinitions
         [Then(@"in the footer displays '([^']*)'")]
         public void ThenInTheFooterDisplays(string copyrights)
         {
-           
+            _weatherApp.CopyrightsShowOnFooter(copyrights).Should().BeTrue();
         }
 
 
