@@ -23,5 +23,11 @@ namespace WebAppsAutomation.Steps
             webDriver.Navigate().GoToUrl("https://boisterous-froyo-aacb2d.netlify.app/");
         }
 
+        public bool TheAppDisplaysTheFollowingData(List<string> datas)
+        {
+            return datas[0] == webDriver.FindElement(truthOrDareMap.Title).Text &&
+                   datas[1] == webDriver.FindElement(truthOrDareMap.SmallTitle).Text &&
+                   datas[2] == webDriver.FindElement(truthOrDareMap.PlayersContainer).Text;
+        }
     }
 }
