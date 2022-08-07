@@ -8,3 +8,12 @@ Scenario: I have launched the TruthOrDare game
 			| Title            | Truth or Dare!    |
 			| SmallTitle       | Enter your Names: |
 			| PlayersContainer | Players:          |
+
+Scenario: Adding player names to the app
+	Given I have launched the TruthOrDare game
+	And I enter the following names
+			| Value |
+			| John  |
+			| Mark  |
+			| Jim   |
+	Then the players container has the names
