@@ -13,6 +13,8 @@ namespace WebAppsAutomation.Page_Elements
 
         public By SearchBtn => By.XPath("//*[@id='searchBtn']");
 
-        public By DetailLabel(string detailLabel) => By.XPath($"//*[@id='{detailLabel}Details']"); 
+        public By DetailLabel(string detailLabel) => By.XPath($"//*[@id='{detailLabel}Details']");
+
+        public By FooterCopyrights => By.XPath("//footer/a");
     }
 }

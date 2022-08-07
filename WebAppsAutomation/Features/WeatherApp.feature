@@ -20,6 +20,9 @@ Scenario: Check if details apper as in the table
 	| Min temp   |
 	| Pressure   |
 	| Max temp   |
-		
+
+Scenario: Check if footer contains copyright
+	Given I have launched the WeatherApp
+	Then in the footer displays 'nikolliervin'
 
 

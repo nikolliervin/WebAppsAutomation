@@ -46,6 +46,11 @@ namespace WebAppsAutomation.StepDefinitions
                 webDriver.FindElement(weatherAppMap.DetailLabel("maxTemp")).Text.Contains(details[5]);
         }
 
+        public bool CopyrightsShowOnFooter(string copyrights)
+        {
+           return webDriver.FindElement(weatherAppMap.FooterCopyrights).Text == copyrights;
+        }
+
       
     }
 }

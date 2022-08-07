@@ -56,7 +56,11 @@ namespace WebAppsAutomation.StepDefinitions
             _weatherApp.TheDetailsAreEqual(tableValues).Should().BeTrue();
         }
 
-
+        [Then(@"in the footer displays '([^']*)'")]
+        public void ThenInTheFooterDisplays(string copyrights)
+        {
+           
+        }
 
 
 
