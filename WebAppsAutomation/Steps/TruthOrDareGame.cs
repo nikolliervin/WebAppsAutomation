@@ -35,6 +35,7 @@ namespace WebAppsAutomation.Steps
             foreach (var item in namesList)
             {
                 webDriver.FindElement(truthOrDareMap.PlayerNameInput).SendKeys(item);
+                webDriver.FindElement(truthOrDareMap.AddPlayerButton).Click();
             }
         }
     }
