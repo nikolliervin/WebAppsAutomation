@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using SpecFlow;
+using TechTalk.SpecFlow;
+using FluentAssertions;
+using WebAppsAutomation.Steps;
 
 namespace WebAppsAutomation.StepDefinitions
 {
-    internal class TruthOrDareGameSteps
+    public class TruthOrDareGameSteps
     {
     }
 }
