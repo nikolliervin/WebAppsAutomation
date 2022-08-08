@@ -20,6 +20,10 @@ namespace WebAppsAutomation.PageElements
         public By NamesAdded(int index) => By.XPath($"//*[@id='playersContainer']/p[{index}]");
 
         public By StartGameButtons(string buttonName) => By.XPath($"//*[@id='{buttonName}Btn']");
+
+        public By StartGameBtn => By.XPath("//*[@id='startGameBtn']");
+
+        public By GameContainer => By.XPath("//*[@id='truthOrDare']");
         
     }
 }

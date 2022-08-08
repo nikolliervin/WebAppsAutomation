@@ -50,12 +50,24 @@ namespace WebAppsAutomation.StepDefinitions
             truthOrDare.ThenTheNamesAreAdded(ConvertTableToList(table)).Should().BeTrue();
         }
 
+        [Given(@"I start the game")]
+        public void GivenIStartTheGame()
+        {
+            truthOrDare.StartGame();
+        }
+
+
         [Then(@"the '([^']*)' button is visible")]
         public void ThenTheButtonIsVisible(string buttonName)
         {
-            
+            truthOrDare.TheButtonIsVisible(buttonName);
         }
 
+        [Then(@"the game container reads '([^']*)'")]
+        public void ThenTheGameContainerReads(string p0)
+        {
+            
+        }
 
 
 

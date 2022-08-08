@@ -29,6 +29,7 @@ Scenario: Starting Game
 			| John  |
 			| Mark  |
 			| Jim   |
+	And I start the game
 	Then the 'Truth' button is visible
 	And the 'Dare' button is visible
 	And the 'Random' button is visible
