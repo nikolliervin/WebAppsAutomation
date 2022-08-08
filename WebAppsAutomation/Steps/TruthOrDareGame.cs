@@ -46,5 +46,10 @@ namespace WebAppsAutomation.Steps
                    namesAdded[2]==webDriver.FindElement(truthOrDareMap.NamesAdded(3)).Text;
                    ;
         }
+
+        public bool TheButtonIsVisible(string buttonName)
+        {
+            return webDriver.FindElement(truthOrDareMap.StartGameButtons(buttonName.ToLower())).Displayed;
+        }
     }
 }

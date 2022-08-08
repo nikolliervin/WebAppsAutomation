@@ -50,6 +50,13 @@ namespace WebAppsAutomation.StepDefinitions
             truthOrDare.ThenTheNamesAreAdded(ConvertTableToList(table)).Should().BeTrue();
         }
 
+        [Then(@"the '([^']*)' button is visible")]
+        public void ThenTheButtonIsVisible(string buttonName)
+        {
+            
+        }
+
+
 
 
         public List<string> ConvertTableToList(Table Table)

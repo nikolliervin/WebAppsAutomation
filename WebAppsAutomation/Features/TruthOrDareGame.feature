@@ -32,3 +32,4 @@ Scenario: Starting Game
 	Then the 'Truth' button is visible
 	And the 'Dare' button is visible
 	And the 'Random' button is visible
+	And the game container reads 'Start The Game'

@@ -18,5 +18,8 @@ namespace WebAppsAutomation.PageElements
         public By AddPlayerButton => By.XPath("//*[@id='addPlayer']");
 
         public By NamesAdded(int index) => By.XPath($"//*[@id='playersContainer']/p[{index}]");
+
+        public By StartGameButtons(string buttonName) => By.XPath($"//*[@id='{buttonName}Btn']");
+        
     }
 }
