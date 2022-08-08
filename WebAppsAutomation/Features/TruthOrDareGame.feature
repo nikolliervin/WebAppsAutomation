@@ -21,3 +21,14 @@ Scenario: Adding player names to the app
 			| John  |
 			| Mark  |
 			| Jim   |
+
+Scenario: Starting Game
+	Given I have launched the TruthOrDare game
+	And I enter the following names
+			| Value |
+			| John  |
+			| Mark  |
+			| Jim   |
+	Then the 'Truth' button is visible
+	And the 'Dare' button is visible
+	And the 'Random' button is visible
