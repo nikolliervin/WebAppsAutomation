@@ -64,9 +64,9 @@ namespace WebAppsAutomation.StepDefinitions
         }
 
         [Then(@"the game container reads '([^']*)'")]
-        public void ThenTheGameContainerReads(string p0)
+        public void ThenTheGameContainerReads(string value)
         {
-            
+            truthOrDare.GameContainerReads(value);
         }
 
 
