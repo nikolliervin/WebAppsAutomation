@@ -34,3 +34,14 @@ Scenario: Starting Game
 	And the 'Dare' button is visible
 	And the 'Random' button is visible
 	And the game container reads 'Start The Game'
+
+Scenario: Clicking New Game button starts a new game
+	Given I have launched the TruthOrDare game
+	And I enter the following names
+			| Value |
+			| John  |
+			| Mark  |
+			| Jim   |
+	And I click the 'NewGame' button
+	Then the enter names header is visible
+
