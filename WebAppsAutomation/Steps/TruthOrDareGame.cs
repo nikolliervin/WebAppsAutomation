@@ -64,7 +64,7 @@ namespace WebAppsAutomation.Steps
 
         public bool IsEnterNamesFieldDisplayed()
         {
-
+            return webDriver.FindElement(truthOrDareMap.SmallTitle).Displayed;
         }
     }
 }

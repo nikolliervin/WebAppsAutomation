@@ -42,6 +42,6 @@ Scenario: Clicking New Game button starts a new game
 			| John  |
 			| Mark  |
 			| Jim   |
-	And I click the 'NewGame' button
+	And I click the 'NewGame'
 	Then the enter names header is visible
 

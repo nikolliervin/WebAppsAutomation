@@ -59,7 +59,7 @@ namespace WebAppsAutomation.StepDefinitions
         [Then(@"the enter names header is visible")]
         public void ThenTheEnterNamesHeaderIsVisible()
         {
-            throw new PendingStepException();
+            truthOrDare.IsEnterNamesFieldDisplayed();
         }
 
 
