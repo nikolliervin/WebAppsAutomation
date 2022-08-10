@@ -61,5 +61,10 @@ namespace WebAppsAutomation.Steps
         {
             return value == webDriver.FindElement(truthOrDareMap.GameContainer).Text;
         }
+
+        public bool IsEnterNamesFieldDisplayed()
+        {
+
+        }
     }
 }

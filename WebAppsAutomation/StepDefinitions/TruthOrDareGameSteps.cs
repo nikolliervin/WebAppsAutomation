@@ -56,6 +56,13 @@ namespace WebAppsAutomation.StepDefinitions
             truthOrDare.StartGame();
         }
 
+        [Then(@"the enter names header is visible")]
+        public void ThenTheEnterNamesHeaderIsVisible()
+        {
+            throw new PendingStepException();
+        }
+
+
 
         [Then(@"the '([^']*)' button is visible")]
         public void ThenTheButtonIsVisible(string buttonName)
