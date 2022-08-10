@@ -280,9 +280,12 @@ this.ScenarioInitialize(scenarioInfo);
  testRunner.And("I enter the following names", ((string)(null)), table5, "And ");
 #line hidden
 #line 45
- testRunner.And("I click the \'NewGame\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I start the game", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 46
+ testRunner.And("I click the \'NewGame\'", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 47
  testRunner.Then("the enter names header is visible", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }

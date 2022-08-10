@@ -66,5 +66,10 @@ namespace WebAppsAutomation.Steps
         {
             return webDriver.FindElement(truthOrDareMap.SmallTitle).Displayed;
         }
+
+        public void ClickButton(string buttonId)
+        {
+            webDriver.FindElement(truthOrDareMap.Buttons(buttonId)).Click();
+        }
     }
 }

@@ -89,6 +89,13 @@ namespace WebAppsAutomation.StepDefinitions
             return tableValues;
         }
 
+        [Given(@"I click the '([^']*)'")]
+        public void GivenIClickThe(string buttonId)
+        {
+            truthOrDare.ClickButton(buttonId);
+        }
+
+
 
     }
 }
