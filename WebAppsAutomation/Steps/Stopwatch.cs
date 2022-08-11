@@ -2,5 +2,9 @@
 {
     public class Stopwatch
     {
+        public void IHaveLaunchedTheStopwatch()
+        {
+
+        }
     }
 }
