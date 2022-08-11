@@ -103,20 +103,20 @@ this.ScenarioInitialize(scenarioInfo);
 #line 5
  testRunner.Given("I have launched the TruthOrDare game", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "Field",
                             "Value"});
-                table1.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "Title",
                             "Truth or Dare!"});
-                table1.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "SmallTitle",
                             "Enter your Names:"});
-                table1.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "PlayersContainer",
                             "Players:"});
 #line 6
- testRunner.Then("the app displays the following data", ((string)(null)), table1, "Then ");
+ testRunner.Then("the app displays the following data", ((string)(null)), table2, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -152,17 +152,6 @@ this.ScenarioInitialize(scenarioInfo);
 #line 13
  testRunner.Given("I have launched the TruthOrDare game", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "Value"});
-                table2.AddRow(new string[] {
-                            "John"});
-                table2.AddRow(new string[] {
-                            "Mark"});
-                table2.AddRow(new string[] {
-                            "Jim"});
-#line 14
- testRunner.And("I enter the following names", ((string)(null)), table2, "And ");
-#line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "Value"});
                 table3.AddRow(new string[] {
@@ -171,8 +160,19 @@ this.ScenarioInitialize(scenarioInfo);
                             "Mark"});
                 table3.AddRow(new string[] {
                             "Jim"});
+#line 14
+ testRunner.And("I enter the following names", ((string)(null)), table3, "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Value"});
+                table4.AddRow(new string[] {
+                            "John"});
+                table4.AddRow(new string[] {
+                            "Mark"});
+                table4.AddRow(new string[] {
+                            "Jim"});
 #line 19
- testRunner.Then("the following names are added", ((string)(null)), table3, "Then ");
+ testRunner.Then("the following names are added", ((string)(null)), table4, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -208,16 +208,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 26
  testRunner.Given("I have launched the TruthOrDare game", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "Value"});
-                table4.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "John"});
-                table4.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "Mark"});
-                table4.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "Jim"});
 #line 27
- testRunner.And("I enter the following names", ((string)(null)), table4, "And ");
+ testRunner.And("I enter the following names", ((string)(null)), table5, "And ");
 #line hidden
 #line 32
  testRunner.And("I start the game", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -268,16 +268,16 @@ this.ScenarioInitialize(scenarioInfo);
 #line 39
  testRunner.Given("I have launched the TruthOrDare game", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "Value"});
-                table5.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "John"});
-                table5.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "Mark"});
-                table5.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "Jim"});
 #line 40
- testRunner.And("I enter the following names", ((string)(null)), table5, "And ");
+ testRunner.And("I enter the following names", ((string)(null)), table6, "And ");
 #line hidden
 #line 45
  testRunner.And("I start the game", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
