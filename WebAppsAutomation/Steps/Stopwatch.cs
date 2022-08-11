@@ -21,10 +21,10 @@ namespace WebAppsAutomation.Steps
 
         public bool ThenTheComponentsAreShown(List<string> components)
         {
-            return webDriver.FindElement(stopwatchElements.Element(components[0])).Displayed &&
-                   webDriver.FindElement(stopwatchElements.Element(components[1])).Displayed &&
-                   webDriver.FindElement(stopwatchElements.Element(components[2])).Displayed &&
-                   webDriver.FindElement(stopwatchElements.Element(components[3])).Displayed;
+            return webDriver.FindElement(stopwatchElements.Element(components[0].ToLower())).Displayed &&
+                   webDriver.FindElement(stopwatchElements.Element(components[1].ToLower())).Displayed &&
+                   webDriver.FindElement(stopwatchElements.Element(components[2].ToLower())).Displayed &&
+                   webDriver.FindElement(stopwatchElements.Element(components[3].ToLower())).Displayed;
 
         }
     }

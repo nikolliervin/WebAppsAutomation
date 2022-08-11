@@ -108,11 +108,11 @@ this.ScenarioInitialize(scenarioInfo);
                 table1.AddRow(new string[] {
                             "Time"});
                 table1.AddRow(new string[] {
-                            "Start Button"});
+                            "Start"});
                 table1.AddRow(new string[] {
-                            "Stop Button"});
+                            "Stop"});
                 table1.AddRow(new string[] {
-                            "Reset Button"});
+                            "Reset"});
                 table1.AddRow(new string[] {
                             "Timer"});
 #line 5
