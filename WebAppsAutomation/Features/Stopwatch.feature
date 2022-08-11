@@ -1,9 +1,11 @@
 ﻿Feature: Stopwatch
 
-
-
-@tag1
-Scenario: [scenario name]
-	Given [context]
-	When [action]
-	Then [outcome]
+Scenario: Launching stopwatch and checking components
+		Given I have launched the Stopwatch
+		Then the following components are displayed:
+		| Components   |
+		| Time         |
+		| Start Button |
+		| Stop Button  |
+		| Reset Button |
+		| Timer        |
