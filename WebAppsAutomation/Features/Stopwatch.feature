@@ -9,3 +9,8 @@ Scenario: Launching stopwatch and checking components
 		| Stop       |
 		| Reset      |
 		| Timer      |
+
+Scenario: Clicking start in the stopwatch, starts the stopwatch
+		Given I have launched the Stopwatch
+		And I click the 'start' button
+		Then the stopwatch starts
