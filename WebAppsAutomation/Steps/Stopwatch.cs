@@ -27,5 +27,10 @@ namespace WebAppsAutomation.Steps
                    webDriver.FindElement(stopwatchElements.Element(components[3].ToLower())).Displayed;
 
         }
+
+        public void IClickTheStopwatchButton(string button)
+        {
+            webDriver.FindElement(stopwatchElements.Element(button)).Click();
+        }
     }
 }

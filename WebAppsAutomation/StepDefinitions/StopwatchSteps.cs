@@ -34,6 +34,13 @@ namespace WebAppsAutomation.StepDefinitions
             stopwatch.ThenTheComponentsAreShown(tableValues).Should().BeTrue();
         }
 
+        [Given(@"I click the '([^']*)' stopwatch button")]
+        public void GivenIClickTheStopwatchButton(string button)
+        {
+            stopwatch.IClickTheStopwatchButton(button);
+        }
+
+
 
     }
 }

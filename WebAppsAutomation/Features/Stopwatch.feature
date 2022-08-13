@@ -12,5 +12,5 @@ Scenario: Launching stopwatch and checking components
 
 Scenario: Clicking start in the stopwatch, starts the stopwatch
 		Given I have launched the Stopwatch
-		And I click the 'start' button
-		Then the stopwatch starts
+		And I click the 'start' stopwatch button
+		#Then the stopwatch starts
