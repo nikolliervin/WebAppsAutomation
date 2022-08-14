@@ -47,6 +47,13 @@ namespace WebAppsAutomation.StepDefinitions
             stopwatch.ThenTheStopwatchStarts();
         }
 
+        [Given(@"I wait '([^']*)' seconds")]
+        public void GivenIWaitSeconds(int seconds)
+        {
+            stopwatch.ThenIWaitSeconds(seconds);
+        }
+
+
 
 
     }

@@ -40,5 +40,10 @@ namespace WebAppsAutomation.Steps
             webDriver.FindElement(stopwatchElements.Element("stop")).Click();
             return webDriver.FindElement(stopwatchElements.Element("timer")).Text != "00:00:00";
         }
+
+        public void ThenIWaitSeconds(int seconds)
+        {
+            Thread.Sleep(seconds * 1000);
+        }
     }
 }
