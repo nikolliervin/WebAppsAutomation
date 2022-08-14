@@ -35,6 +35,7 @@ namespace WebAppsAutomation.StepDefinitions
         }
 
         [Given(@"I click the '([^']*)' stopwatch button")]
+        [When(@"I click the '([^']*)' stopwatch button")]
         public void GivenIClickTheStopwatchButton(string button)
         {
             stopwatch.IClickTheStopwatchButton(button);
