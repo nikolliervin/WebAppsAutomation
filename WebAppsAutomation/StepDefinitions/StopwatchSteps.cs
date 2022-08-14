@@ -44,7 +44,7 @@ namespace WebAppsAutomation.StepDefinitions
         [Then(@"the stopwatch starts")]
         public void ThenTheStopwatchStarts()
         {
-            stopwatch.ThenTheStopwatchStarts();
+            stopwatch.ThenTheStopwatchStarts().Should().BeTrue();
         }
 
         [Given(@"I wait '([^']*)' seconds")]
@@ -52,6 +52,15 @@ namespace WebAppsAutomation.StepDefinitions
         {
             stopwatch.ThenIWaitSeconds(seconds);
         }
+
+
+        [Then(@"the ""([^""]*)"" field displays ""([^""]*)""")]
+        public void ThenTheFieldDisplays(string field, string value)
+        {
+            stopwatch.ThenTheStopwatchDisplays(field, value);
+        }
+
+
 
 
 

@@ -45,5 +45,10 @@ namespace WebAppsAutomation.Steps
         {
             Thread.Sleep(seconds * 1000);
         }
+
+        public bool ThenTheStopwatchDisplays(string field, string value)
+        {
+            return webDriver.FindElement(stopwatchElements.Element(field)).Text == value;
+        }
     }
 }

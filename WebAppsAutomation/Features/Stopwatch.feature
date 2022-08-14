@@ -20,3 +20,4 @@ Scenario: Clicking reset in the stopwatch resets the stopwatch
 		And I click the 'start' stopwatch button
 		And I wait '3' seconds
 		When I click the 'reset' stopwatch button
+		Then the "timer" field displays "00:00:00"
