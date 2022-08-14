@@ -155,6 +155,9 @@ this.ScenarioInitialize(scenarioInfo);
 #line 15
   testRunner.And("I click the \'start\' stopwatch button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
+#line 16
+  testRunner.Then("the stopwatch starts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
             }
             this.ScenarioCleanup();
         }

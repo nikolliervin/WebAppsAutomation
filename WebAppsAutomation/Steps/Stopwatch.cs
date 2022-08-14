@@ -1,6 +1,7 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
 using System.Collections.Generic;
+using System.Threading;
 using WebAppsAutomation.Pages;
 
 namespace WebAppsAutomation.Steps
@@ -31,6 +32,13 @@ namespace WebAppsAutomation.Steps
         public void IClickTheStopwatchButton(string button)
         {
             webDriver.FindElement(stopwatchElements.Element(button)).Click();
+        }
+
+        public bool ThenTheStopwatchStarts()
+        {
+            Thread.Sleep(2000);
+            webDriver.FindElement(stopwatchElements.Element("stop")).Click();
+            return webDriver.FindElement(stopwatchElements.Element("timer")).Text != "00:00:00";
         }
     }
 }

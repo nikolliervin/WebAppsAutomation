@@ -40,6 +40,12 @@ namespace WebAppsAutomation.StepDefinitions
             stopwatch.IClickTheStopwatchButton(button);
         }
 
+        [Then(@"the stopwatch starts")]
+        public void ThenTheStopwatchStarts()
+        {
+            stopwatch.ThenTheStopwatchStarts();
+        }
+
 
 
     }
