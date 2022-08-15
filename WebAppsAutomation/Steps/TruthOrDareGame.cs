@@ -1,17 +1,11 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using FluentAssertions;
-using WebAppsAutomation.Page_Elements;
+﻿using System.Collections.Generic;
 using WebAppsAutomation.PageElements;
 
 namespace WebAppsAutomation.Steps
 {
-    public class TruthOrDareGame
+    public class TruthOrDareGame : WebDriver.WebDriver
     {
-        IWebDriver webDriver = new ChromeDriver();
+
         private readonly TruthOrDareGameElements truthOrDareMap;
         public TruthOrDareGame(TruthOrDareGameElements _truthOrDareMap)
         {
@@ -20,56 +14,56 @@ namespace WebAppsAutomation.Steps
 
         public void IHaveLaunchedTheApp()
         {
-            webDriver.Navigate().GoToUrl("https://boisterous-froyo-aacb2d.netlify.app/");
+            driver.Navigate().GoToUrl("https://boisterous-froyo-aacb2d.netlify.app/");
         }
 
         public bool TheAppDisplaysTheFollowingData(List<string> datas)
         {
-            return datas[0] == webDriver.FindElement(truthOrDareMap.Title).Text &&
-                   datas[1] == webDriver.FindElement(truthOrDareMap.SmallTitle).Text &&
-                   datas[2] == webDriver.FindElement(truthOrDareMap.PlayersContainer).Text;
+            return datas[0] == driver.FindElement(truthOrDareMap.Title).Text &&
+                   datas[1] == driver.FindElement(truthOrDareMap.SmallTitle).Text &&
+                   datas[2] == driver.FindElement(truthOrDareMap.PlayersContainer).Text;
         }
 
         public void IEnterTheFollowingNames(List<string> namesList)
         {
             foreach (var item in namesList)
             {
-                webDriver.FindElement(truthOrDareMap.PlayerNameInput).SendKeys(item);
-                webDriver.FindElement(truthOrDareMap.AddPlayerButton).Click();
+                driver.FindElement(truthOrDareMap.PlayerNameInput).SendKeys(item);
+                driver.FindElement(truthOrDareMap.AddPlayerButton).Click();
             }
         }
 
         public bool ThenTheNamesAreAdded(List<string> namesAdded)
         {
-            return namesAdded[0]==webDriver.FindElement(truthOrDareMap.NamesAdded(1)).Text &&
-                   namesAdded[1]==webDriver.FindElement(truthOrDareMap.NamesAdded(2)).Text &&
-                   namesAdded[2]==webDriver.FindElement(truthOrDareMap.NamesAdded(3)).Text;
-                   ;
+            return namesAdded[0] == driver.FindElement(truthOrDareMap.NamesAdded(1)).Text &&
+                   namesAdded[1] == driver.FindElement(truthOrDareMap.NamesAdded(2)).Text &&
+                   namesAdded[2] == driver.FindElement(truthOrDareMap.NamesAdded(3)).Text;
+            ;
         }
 
         public void StartGame()
         {
-            webDriver.FindElement(truthOrDareMap.StartGameBtn).Click();
+            driver.FindElement(truthOrDareMap.StartGameBtn).Click();
         }
 
         public bool TheButtonIsVisible(string buttonName)
         {
-            return webDriver.FindElement(truthOrDareMap.StartGameButtons(buttonName.ToLower())).Displayed;
+            return driver.FindElement(truthOrDareMap.StartGameButtons(buttonName.ToLower())).Displayed;
         }
 
         public bool GameContainerReads(string value)
         {
-            return value == webDriver.FindElement(truthOrDareMap.GameContainer).Text;
+            return value == driver.FindElement(truthOrDareMap.GameContainer).Text;
         }
 
         public bool IsEnterNamesFieldDisplayed()
         {
-            return webDriver.FindElement(truthOrDareMap.SmallTitle).Displayed;
+            return driver.FindElement(truthOrDareMap.SmallTitle).Displayed;
         }
 
         public void ClickButton(string buttonId)
         {
-            webDriver.FindElement(truthOrDareMap.Buttons(buttonId)).Click();
+            driver.FindElement(truthOrDareMap.Buttons(buttonId)).Click();
         }
     }
 }
