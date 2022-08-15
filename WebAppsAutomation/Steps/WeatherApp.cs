@@ -1,16 +1,10 @@
-﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using FluentAssertions;
+﻿using System.Collections.Generic;
 using WebAppsAutomation.Page_Elements;
 
 namespace WebAppsAutomation.Steps
 {
-    public class WeatherApp
+    public class WeatherApp : WebDriver.WebDriver
     {
-        IWebDriver webDriver = new ChromeDriver();
 
 
         private readonly WeatherAppElements weatherAppMap;
@@ -21,34 +15,34 @@ namespace WebAppsAutomation.Steps
 
         public void IHaveLaunchedTheApp()
         {
-            webDriver.Navigate().GoToUrl("https://marvelous-nougat-1199fd.netlify.app/");
+            driver.Navigate().GoToUrl("https://marvelous-nougat-1199fd.netlify.app/");
         }
 
         public bool IsCitySetTo(string cityName)
         {
-            return cityName == webDriver.FindElement(weatherAppMap.CityValue).Text;
+            return cityName == driver.FindElement(weatherAppMap.CityValue).Text;
         }
 
         public void ISearchFor(string cityName)
         {
-            webDriver.FindElement(weatherAppMap.CityInput).SendKeys(cityName);
-            webDriver.FindElement(weatherAppMap.SearchBtn).Click();
+            driver.FindElement(weatherAppMap.CityInput).SendKeys(cityName);
+            driver.FindElement(weatherAppMap.SearchBtn).Click();
         }
 
         public bool TheDetailsAreEqual(List<string> details)
         {
             return
-                webDriver.FindElement(weatherAppMap.DetailLabel("humidity")).Text.Contains(details[0]) &&
-                webDriver.FindElement(weatherAppMap.DetailLabel("windSpeed")).Text.Contains(details[1]) &&
-                webDriver.FindElement(weatherAppMap.DetailLabel("windDeg")).Text.Contains(details[2]) &&
-                webDriver.FindElement(weatherAppMap.DetailLabel("minTemp")).Text.Contains(details[3]) &&
-                webDriver.FindElement(weatherAppMap.DetailLabel("pressure")).Text.Contains(details[4]) &&
-                webDriver.FindElement(weatherAppMap.DetailLabel("maxTemp")).Text.Contains(details[5]);
+                driver.FindElement(weatherAppMap.DetailLabel("humidity")).Text.Contains(details[0]) &&
+                driver.FindElement(weatherAppMap.DetailLabel("windSpeed")).Text.Contains(details[1]) &&
+                driver.FindElement(weatherAppMap.DetailLabel("windDeg")).Text.Contains(details[2]) &&
+                driver.FindElement(weatherAppMap.DetailLabel("minTemp")).Text.Contains(details[3]) &&
+                driver.FindElement(weatherAppMap.DetailLabel("pressure")).Text.Contains(details[4]) &&
+                driver.FindElement(weatherAppMap.DetailLabel("maxTemp")).Text.Contains(details[5]);
         }
 
         public bool CopyrightsShowOnFooter(string copyrights)
         {
-            return webDriver.FindElement(weatherAppMap.FooterCopyrights).Text == copyrights;
+            return driver.FindElement(weatherAppMap.FooterCopyrights).Text == copyrights;
         }
 
 
