@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using TechTalk.SpecFlow;
-using OpenQA.Selenium;
-using WebAppsAutomation.Steps;
-using WebAppsAutomation.PageElements;
-using OpenQA.Selenium.Chrome;
+﻿using TechTalk.SpecFlow;
 
 namespace WebAppsAutomation.Hooks
 {
     [Binding]
-    public class Hooks
+    public class Hooks : WebDriver.WebDriver
     {
+        [AfterScenario("WebAppsAutomation", Order = 1)]
 
+        public void CloseWebDriver()
+        {
+
+
+
+        }
     }
 }
