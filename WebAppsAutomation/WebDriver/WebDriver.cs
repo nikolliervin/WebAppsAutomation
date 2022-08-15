@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using OpenQA.Selenium.Chrome;
 
 namespace WebAppsAutomation.WebDriver
 {
-    internal class WebDriver
+    public class WebDriver
     {
+        ChromeDriver driver = new ChromeDriver();
+
     }
 }
