@@ -1,16 +1,12 @@
 ﻿using OpenQA.Selenium;
-using OpenQA.Selenium.Chrome;
 using System;
-using System.Collections.Generic;
-using System.Text;
-using FluentAssertions;
 using WebAppsAutomation.Pages;
 
 namespace WebAppsAutomation.Steps
 {
-    public class ToDoApp
+    public class ToDoApp : WebDriver.WebDriver
     {
-        IWebDriver webDriver = new ChromeDriver();
+
         private readonly ToDoAppElements _pagemap;
         public ToDoApp(ToDoAppElements pagemap)
         {
@@ -20,51 +16,51 @@ namespace WebAppsAutomation.Steps
 
         public void IHaveLaunchedTheApp()
         {
-            webDriver.Navigate().GoToUrl("https://gorgeous-fudge-cc9998.netlify.app/");
+            driver.Navigate().GoToUrl("https://gorgeous-fudge-cc9998.netlify.app/");
 
         }
 
         public bool DateIsSetToToday()
         {
             var today = DateTime.Now.Year.ToString("d2") + "-" + DateTime.Now.Month.ToString("d2") + "-" + DateTime.Now.Day.ToString("d2");
-            return today == webDriver.FindElement(_pagemap.dateField).Text;
+            return today == driver.FindElement(_pagemap.dateField).Text;
         }
 
         public void AddTheTask(string taskName)
         {
-            webDriver.FindElement(_pagemap.taskInput).SendKeys(taskName);
+            driver.FindElement(_pagemap.taskInput).SendKeys(taskName);
         }
 
         public void ClickButton(string buttonId)
         {
-            webDriver.FindElement(_pagemap.buttons(buttonId)).Click();
+            driver.FindElement(_pagemap.buttons(buttonId)).Click();
         }
 
         public bool OneNewTaskIsAdded(int taskNumber)
         {
-            return webDriver.FindElements(_pagemap.taskfieldAdded).Count == taskNumber;
+            return driver.FindElements(_pagemap.taskfieldAdded).Count == taskNumber;
         }
 
         public bool ThenTheTasksFieldIsEmpty()
         {
-            return webDriver.FindElements(_pagemap.taskfieldAdded).Count == 0;
+            return driver.FindElements(_pagemap.taskfieldAdded).Count == 0;
         }
 
         public bool ThenOneTaskIsDeleted(string theTaskName)
         {
-            return webDriver.FindElement(_pagemap.taskContent).Text == theTaskName;
+            return driver.FindElement(_pagemap.taskContent).Text == theTaskName;
         }
 
         public bool InputFieldIsEmpty()
         {
-            return webDriver.FindElement(_pagemap.taskInput).GetAttribute("value") == "";
+            return driver.FindElement(_pagemap.taskInput).GetAttribute("value") == "";
         }
 
         public bool ThenNoTaskIsAdded()
         {
             try
             {
-                webDriver.FindElement(_pagemap.taskfieldAdded);
+                driver.FindElement(_pagemap.taskfieldAdded);
                 return false;
             }
             catch (NoSuchElementException)

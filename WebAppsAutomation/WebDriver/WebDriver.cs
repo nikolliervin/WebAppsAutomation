@@ -1,10 +1,11 @@
-﻿using OpenQA.Selenium.Chrome;
+﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Chrome;
 
 namespace WebAppsAutomation.WebDriver
 {
     public class WebDriver
     {
-        ChromeDriver driver = new ChromeDriver();
+        public IWebDriver driver = new ChromeDriver();
 
     }
 }
