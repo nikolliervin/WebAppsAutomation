@@ -46,6 +46,13 @@ namespace WebAppsAutomation.StepDefinitions
             passwordGenerator.ThenThePasswordShouldBe(field, number).Should().BeTrue();
         }
 
+        [Given(@"I uncheck '([^']*)' tick")]
+        public void GivenIUncheckTick(string tick)
+        {
+            throw new PendingStepException();
+        }
+
+
 
 
 

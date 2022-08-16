@@ -16,3 +16,9 @@ Scenario: Check if the password default lenght is 16 characters
 	Given I have launched the Password Generator
 	And I click on 'generate' button
 	Then the 'password' lenght is '16' characters long
+
+Scenario: Password does not contain numbers when numbers is unchecked
+	Given I have launched the Password Generator
+	And I uncheck 'number' tick
+	When I click on 'generate' button
+	Then the password does not contain a 'number'

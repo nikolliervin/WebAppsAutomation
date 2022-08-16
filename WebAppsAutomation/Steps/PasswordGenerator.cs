@@ -35,5 +35,11 @@ namespace WebAppsAutomation.Steps
         {
             return driver.FindElement(elements.element(field)).Text.Length == number;
         }
+
+        public void IUnselect(string value)
+        {
+            driver.FindElement(elements.element(value)).Click();
+        }
+
     }
 }
