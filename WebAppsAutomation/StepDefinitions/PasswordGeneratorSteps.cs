@@ -22,6 +22,7 @@ namespace WebAppsAutomation.StepDefinitions
         }
 
         [Given(@"I click on '([^']*)' button")]
+        [When(@"I click on '([^']*)' button")]
         public void GivenIClickOnButton(string option)
         {
             passwordGenerator.AndIClickTheGenerateButton(option);
