@@ -11,7 +11,6 @@ namespace WebAppsAutomation.Hooks
         {
 
 
-
         }
     }
 }

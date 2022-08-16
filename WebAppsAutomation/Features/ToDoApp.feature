@@ -10,7 +10,6 @@ Scenario: Add task to ToDoApp
 	And I click the 'addBtn' button
 	Then '1' new task is added in the to do app
 
-@WebAppsAutomation
 Scenario: Delete All tasks
 	Given I have launched the ToDoApp
 	And I add the task 'Automate WebApps'

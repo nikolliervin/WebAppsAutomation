@@ -29,6 +29,7 @@ namespace WebAppsAutomation.Steps
         public void AddTheTask(string taskName)
         {
             driver.FindElement(_pagemap.taskInput).SendKeys(taskName);
+
         }
 
         public void ClickButton(string buttonId)
