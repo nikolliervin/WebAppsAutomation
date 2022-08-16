@@ -34,6 +34,14 @@ namespace WebAppsAutomation.StepDefinitions
             passwordGenerator.ThenThePasswordShows(container).Should().BeTrue();
         }
 
+        [Then(@"the '([^']*)' value is on the clipboard")]
+        public void ThenTheValueIsOnTheClipboard(string password)
+        {
+            throw new PendingStepException();
+        }
+
+
+
 
 
 

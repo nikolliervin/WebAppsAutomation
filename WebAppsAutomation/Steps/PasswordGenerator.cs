@@ -1,4 +1,5 @@
 ﻿using WebAppsAutomation.PageElements;
+using Xamarin.Essentials;
 
 namespace WebAppsAutomation.Steps
 {
@@ -22,6 +23,11 @@ namespace WebAppsAutomation.Steps
         public bool ThenThePasswordShows(string container)
         {
             return driver.FindElement(elements.element(container)).Text != "";
+        }
+
+        public bool ThenTheClipboardContainsThePassword(string field)
+        {
+            return Clipboard.GetTextAsync().ToString().Contains(driver.FindElement(elements.element(field)).Text);
         }
     }
 }
