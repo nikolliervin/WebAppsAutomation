@@ -27,7 +27,8 @@ namespace WebAppsAutomation.Steps
 
         public bool ThenTheClipboardContainsThePassword(string field)
         {
-            return Clipboard.GetTextAsync().ToString().Contains(driver.FindElement(elements.element(field)).Text);
+            //ToDo: reference the nuget package to make xamaring essentials work
+            return Clipboard.HasText.ToString().Contains(driver.FindElement(elements.element(field)).Text);
         }
     }
 }

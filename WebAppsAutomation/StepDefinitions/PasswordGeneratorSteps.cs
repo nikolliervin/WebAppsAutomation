@@ -35,9 +35,9 @@ namespace WebAppsAutomation.StepDefinitions
         }
 
         [Then(@"the '([^']*)' value is on the clipboard")]
-        public void ThenTheValueIsOnTheClipboard(string password)
+        public void ThenTheValueIsOnTheClipboard(string field)
         {
-            throw new PendingStepException();
+            passwordGenerator.ThenTheClipboardContainsThePassword(field);
         }
 
 

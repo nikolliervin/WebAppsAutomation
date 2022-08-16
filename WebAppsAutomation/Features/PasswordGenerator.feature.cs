@@ -149,6 +149,9 @@ this.ScenarioInitialize(scenarioInfo);
 #line 12
  testRunner.When("I click on \'copy\' button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
+#line 13
+ testRunner.Then("the \'password\' value is on the clipboard", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
             }
             this.ScenarioCleanup();
         }
