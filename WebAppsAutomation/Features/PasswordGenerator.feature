@@ -1,9 +1,8 @@
 ﻿Feature: PasswordGenerator
+		
 
-A short summary of the feature
+Scenario: Generating a password
+	Given I have launched the Password Generator
+	And I click on 'generate' button
+	Then the password shows in the 'password' container
 
-@tag1
-Scenario: [scenario name]
-	Given [context]
-	When [action]
-	Then [outcome]
