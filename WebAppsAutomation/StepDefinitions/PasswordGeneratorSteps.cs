@@ -49,8 +49,15 @@ namespace WebAppsAutomation.StepDefinitions
         [Given(@"I uncheck '([^']*)' tick")]
         public void GivenIUncheckTick(string tick)
         {
-            throw new PendingStepException();
+            passwordGenerator.IUnselect(tick);
         }
+
+        [Then(@"the '([^']*)' does not contain a '([^']*)'")]
+        public void ThenThePasswordDoesNotContainA(string field, string type)
+        {
+            passwordGenerator.ThenThePasswordDoesNotContain(field, type).Should().BeTrue();
+        }
+
 
 
 

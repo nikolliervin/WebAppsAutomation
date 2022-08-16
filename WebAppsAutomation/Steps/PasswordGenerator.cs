@@ -1,4 +1,5 @@
-﻿using WebAppsAutomation.PageElements;
+﻿using System.Linq;
+using WebAppsAutomation.PageElements;
 using Xamarin.Essentials;
 
 namespace WebAppsAutomation.Steps
@@ -41,5 +42,13 @@ namespace WebAppsAutomation.Steps
             driver.FindElement(elements.element(value)).Click();
         }
 
+        public bool ThenThePasswordDoesNotContain(string field, string type)
+        {
+            if (type == "number")
+                return driver.FindElement(elements.element(field)).Text.Any(char.IsDigit);
+
+            else
+                return false;
+        }
     }
 }
