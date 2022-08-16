@@ -40,6 +40,13 @@ namespace WebAppsAutomation.StepDefinitions
             passwordGenerator.ThenTheClipboardContainsThePassword(field);
         }
 
+        [Then(@"the '([^']*)' lenght is '([^']*)' characters long")]
+        public void ThenThePasswordLenghtIsCharactersLong(string field, int number)
+        {
+            passwordGenerator.ThenThePasswordShouldBe(field, number).Should().BeTrue();
+        }
+
+
 
 
 

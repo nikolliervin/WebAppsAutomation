@@ -15,4 +15,4 @@ Scenario: Generating a password
 Scenario: Check if the password default lenght is 16 characters
 	Given I have launched the Password Generator
 	And I click on 'generate' button
-	Then the password lenght is '16' characters long
+	Then the 'password' lenght is '16' characters long

@@ -30,5 +30,10 @@ namespace WebAppsAutomation.Steps
             //ToDo: reference the nuget package to make xamaring essentials work
             return Clipboard.HasText.ToString().Contains(driver.FindElement(elements.element(field)).Text);
         }
+
+        public bool ThenThePasswordShouldBe(string field, int number)
+        {
+            return driver.FindElement(elements.element(field)).Text.Length == number;
+        }
     }
 }
