@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using WebAppsAutomation.PageElements;
 using Xamarin.Essentials;
 
@@ -46,7 +47,8 @@ namespace WebAppsAutomation.Steps
         {
             if (type == "number")
                 return driver.FindElement(elements.element(field)).Text.Any(char.IsDigit);
-
+            else if (type == "symbol")
+                return driver.FindElement(elements.element(field)).Text.Any(ch => !Char.IsLetterOrDigit(ch));
             else
                 return false;
         }
