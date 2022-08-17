@@ -55,7 +55,7 @@ namespace WebAppsAutomation.StepDefinitions
         [Then(@"the '([^']*)' does not contain a '([^']*)'")]
         public void ThenThePasswordDoesNotContainA(string field, string type)
         {
-            passwordGenerator.ThenThePasswordDoesNotContain(field, type).Should().BeTrue();
+            passwordGenerator.ThenThePasswordDoesNotContain(field, type).Should().BeFalse();
         }
 
 
