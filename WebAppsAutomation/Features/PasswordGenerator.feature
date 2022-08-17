@@ -22,3 +22,9 @@ Scenario: Password does not contain numbers when numbers is unchecked
 	And I uncheck 'number' tick
 	When I click on 'generate' button
 	Then the 'password' does not contain a 'number'
+
+Scenario: Password does not contain symbols when symbols is unchecked
+	Given I have launched the Password Generator
+	And I uncheck 'symbol' tick
+	When I click on 'generate' button
+	Then the 'password' does not contain a 'symbol'
