@@ -34,3 +34,9 @@ Scenario: Password does not contain Uppercase when upercase is unchecked
 	And I uncheck 'uppercase' tick
 	When I click on 'generate' button
 	Then the 'password' does not contain a 'uppercase'
+
+Scenario: Passoword does not contain Lowercase when lowercase is unchecked
+	Given I have launched the Password Generator
+	And I uncheck 'lowercase' tick
+	When I click on 'generate' button
+	Then the 'password' does not contain a 'lowercase'
