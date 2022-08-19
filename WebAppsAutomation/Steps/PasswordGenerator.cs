@@ -51,6 +51,9 @@ namespace WebAppsAutomation.Steps
                 return driver.FindElement(elements.element(field)).Text.Any(ch => !Char.IsLetterOrDigit(ch));
             else if (type == "uppercase")
                 return driver.FindElement(elements.element(field)).Text.Any(char.IsUpper);
+            else if (type == "lowercase")
+                return driver.FindElement(elements.element(field)).Text.Any(char.IsLower);
+
             else return false;
         }
     }
