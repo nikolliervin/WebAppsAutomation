@@ -28,3 +28,9 @@ Scenario: Password does not contain symbols when symbols is unchecked
 	And I uncheck 'symbol' tick
 	When I click on 'generate' button
 	Then the 'password' does not contain a 'symbol'
+
+Scenario: Password does not contain Uppercase when upercase is unchecked
+	Given I have launched the Password Generator
+	And I uncheck 'uppercase' tick
+	When I click on 'generate' button
+	Then the 'password' does not contain a 'uppercase'
